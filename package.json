@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "first": "node index.js"
+    "first": "node first_milestone/index.js;node first_milestone/test_migration.js"
   },
   "keywords": [],
   "author": "",

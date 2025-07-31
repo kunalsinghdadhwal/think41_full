@@ -3,7 +3,6 @@ import csv from "csv-parser";
 import { Pool } from "pg";
 import dotenv from "dotenv";
 
-
 dotenv.config();
 if (!process.env.POSTGRES_PASSWORD) {
   console.error("POSTGRES_PASSWORD environment variable is not set.");
