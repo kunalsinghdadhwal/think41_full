@@ -34,4 +34,26 @@ async function getProductsByCategory(category) {
   }
 }
 
-getProductsByCategory("Accessories");
+async function getFirstFiveProducts() {
+  const client = await pool.connect();
+
+  try {
+    const res = await client.query(`SELECT * FROM products LIMIT 5`);
+
+    console.log("First 5 products:");
+    res.rows.forEach((row) => {
+      console.log(row);
+    });
+  } catch (error) {
+    console.error("Query error:", error);
+  } finally {
+    client.release();
+  }
+}
+
+async function main() {
+  await getFirstFiveProducts();
+  await pool.end();
+}
+
+main().catch(console.error);

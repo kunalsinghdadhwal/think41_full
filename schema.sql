@@ -1,4 +1,3 @@
--- Create products table
 CREATE TABLE IF NOT EXISTS products (
     id INTEGER PRIMARY KEY,
     cost DECIMAL(10, 2),
